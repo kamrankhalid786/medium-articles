@@ -1,0 +1,29 @@
+name: Release ZIP on tag
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create zip archive
+        run: |
+          TAG="${{ github.ref_name }}"
+          ARCHIVE_NAME="medium-articles-${TAG}.zip"
+          echo "Creating $ARCHIVE_NAME"
+          zip -r "$ARCHIVE_NAME" . -x .github/**\n          echo "::set-output name=archive::$ARCHIVE_NAME"
+
+      - name: Create GitHub release and upload asset
+        uses: softprops/action-gh-release@v1
+        with:
+          files: "medium-articles-${{ github.ref_name }}.zip"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
