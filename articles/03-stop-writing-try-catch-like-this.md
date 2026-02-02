@@ -1,13 +1,13 @@
 ---
-title: "Stop writing try/catch like this (Laravel) — a practical guide"
-description: "Why catching everything is an anti-pattern and how to structure error handling in Laravel-style apps (teaching adaptation)."
+title: "Stop writing try/catch like this (PHP) — a practical guide"
+description: "Why catching everything is an anti-pattern and how to structure error handling in PHP (teaching adaptation)."
 author: Kamran Khalid
-tags: [php, laravel, testing, teaching]
+tags: [php, testing, teaching]
 ---
 
 Summary
 -------
-This short, classroom-friendly adaptation is based on the ideas in "Stop writing try/catch like this in Laravel" (link below). It explains the common anti-pattern of broadly-catching exceptions, shows a safer, testable approach, and includes a small, runnable example with tests.
+This short, classroom-friendly adaptation is based on the ideas in the original article (link below). It explains the common anti-pattern of broadly-catching exceptions in PHP, shows a safer, testable approach, and includes a small, runnable example with tests.
 
 Original: https://medium.com/stackademic/stop-writing-try-catch-like-this-in-laravel-f8886da384c7
 
@@ -19,7 +19,7 @@ Why this matters
 Anti-pattern (what students often write)
 ---------------------------------------
 ```php
-// examples/laravel-exception-handling/src/BadHandler.php
+// examples/php-exception-handling/src/BadHandler.php
 public function process(array $data): bool
 {
     try {

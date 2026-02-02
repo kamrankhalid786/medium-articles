@@ -4,6 +4,7 @@ nav:
   - Home: index.md
   - Articles:
       - "Intro": articles/01-intro-to-topic.md
+      - "Stop writing try/catch like this (PHP)": articles/03-stop-writing-try-catch-like-this.md
 theme:
   name: material
 docs_dir: docs

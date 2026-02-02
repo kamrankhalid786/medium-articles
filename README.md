@@ -4,7 +4,7 @@ This repository contains Medium-style article examples, runnable code, notebooks
 
 ## What you'll find ✅
 - `articles/` — Medium-style Markdown articles with exercises
-- `examples/` — runnable code (Python + JavaScript) with tests
+- `examples/` — runnable code (Python, JavaScript, PHP) with tests
 - `notebooks/` — interactive Jupyter demos (Colab-ready)
 - `docs/` — MkDocs site to preview articles locally / deploy to GitHub Pages
 

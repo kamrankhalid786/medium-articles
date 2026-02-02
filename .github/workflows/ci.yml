@@ -36,9 +36,32 @@ jobs:
           npm ci || npm install
           npm test
 
+  php:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-versions: [8.1, 8.2]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          extensions: mbstring
+      - name: Install composer deps
+        working-directory: examples/php-exception-handling
+        run: |
+          php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+          php composer-setup.php --install-dir=/usr/local/bin --filename=composer || true
+          composer install --no-interaction --prefer-dist
+      - name: Run PHP unit tests
+        working-directory: examples/php-exception-handling
+        run: |
+          vendor/bin/phpunit -c phpunit.xml
+
   build-docs:
     runs-on: ubuntu-latest
-    needs: test
+    needs: [test, php]
     steps:
       - uses: actions/checkout@v4
       - name: Build docs
