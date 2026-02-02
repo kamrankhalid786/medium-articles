@@ -9,18 +9,43 @@ This repository contains Medium-style article examples, runnable code, notebooks
 - `docs/` — MkDocs site to preview articles locally / deploy to GitHub Pages
 
 ## Quickstart (for students) ▶️
+
+[![starter branch](https://img.shields.io/badge/branch-starter-blue?logo=github)](https://github.com/kamrankhalid786/medium-articles/tree/starter)
+
+Option A — recommended (students): clone the **starter** branch directly
+```bash
+# clone only the starter branch (fast, student-ready)
+git clone --branch starter --single-branch https://github.com/kamrankhalid786/medium-articles.git
+cd medium-articles
+```
+
+Option B — clone full repo and switch to starter
 ```bash
 git clone https://github.com/kamrankhalid786/medium-articles.git
 cd medium-articles
-# Python example
+git checkout starter
+```
+
+Run an example (Python)
+```bash
 cd examples/intro-python
 python -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt
 pytest -q
-# JavaScript example
-cd ../intro-js
+```
+
+Run an example (JavaScript)
+```bash
+cd examples/intro-js
 npm install
 npm test
+```
+
+Run the PHP example (if you have PHP + composer)
+```bash
+cd examples/php-exception-handling
+composer install --no-interaction --prefer-dist
+vendor/bin/phpunit -c phpunit.xml
 ```
 
 ## Instructor notes
