@@ -1,27 +1,19 @@
-"""Small text-normalisation helpers used by the demo article."""
-import re
-import unicodedata
+"""Starter: implement `normalize_text` to make the tests pass.
 
-WORD_RE = re.compile(r"\w+", flags=re.UNICODE)
+This branch (`starter`) intentionally DOES NOT contain the full solution — it's the student scaffold.
+Follow the instructions in `tests/` to implement the required behaviour.
+"""
+import re
 
 
 def normalize_text(text: str) -> str:
-    """Return a deterministic, whitespace-separated, lowercase string.
+    """Student task: implement text normalisation.
 
-    - NFC-normalize unicode
-    - remove control characters and punctuation
-    - collapse whitespace
+    - keep the function signature
+    - ensure `tests/test_solution.py` passes
     """
-    if not isinstance(text, str):
-        raise TypeError("text must be str")
-    # unicode normalisation
-    text = unicodedata.normalize("NFC", text)
-    # lower
-    text = text.lower()
-    # keep only word characters and spaces
-    words = WORD_RE.findall(text)
-    return " ".join(words)
+    raise NotImplementedError("Implement normalize_text(text: str) — see tests in tests/")
 
 
 if __name__ == "__main__":
-    print(normalize_text("Hello, WORLD!!! 👋"))
+    print("This is the starter branch. Implement `normalize_text` to run the examples.")
