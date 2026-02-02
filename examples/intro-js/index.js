@@ -1,14 +1,11 @@
-// Small helper: normalise a string (lowercase + keep word chars)
+// Starter: implement `normalizeText` to make the tests pass.
+// This file is intentionally a stub on the `starter` branch — students implement the function.
 function normalizeText(s) {
-  if (typeof s !== 'string') throw new TypeError('s must be a string');
-  return (s || '')
-    .toLowerCase()
-    .match(/\w+/gu)
-    ?.join(' ') || '';
+  throw new Error('Not implemented — implement normalizeText(s) as described in tests/test.js');
 }
 
 module.exports = { normalizeText };
 
 if (require.main === module) {
-  console.log(normalizeText('Hello, WORLD!!!'));
+  console.log('Starter branch: implement normalizeText to run the example');
 }
