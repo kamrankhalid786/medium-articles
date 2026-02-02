@@ -10,7 +10,8 @@ This repository contains Medium-style article examples, runnable code, notebooks
 
 ## Quickstart (for students) ▶️
 
-[![starter branch](https://img.shields.io/badge/branch-starter-blue?logo=github)](https://github.com/kamrankhalid786/medium-articles/tree/starter)
+[![starter branch](https://img.shields.io/badge/branch-starter-blue?logo=github)](https://github.com/kamrankhalid786/medium-articles/tree/starter)  
+[![download starter zip](https://img.shields.io/badge/download-starter.zip-brightgreen?logo=github)](https://github.com/kamrankhalid786/medium-articles/archive/refs/heads/starter.zip)
 
 Option A — recommended (students): clone the **starter** branch directly
 ```bash
