@@ -1,9 +1,9 @@
-Laravel exception-handling (teaching example)
+PHP exception-handling (teaching example)
 
 Quickstart
 ---------
 # from repository root
-cd examples/laravel-exception-handling
+cd examples/php-exception-handling
 composer install --no-interaction --prefer-dist
 vendor/bin/phpunit -c phpunit.xml
 

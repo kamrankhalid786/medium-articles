@@ -1,6 +1,6 @@
 {
-  "name": "medium-articles/laravel-exception-handling",
-  "description": "Minimal examples showing bad vs good exception handling (teaching)",
+  "name": "medium-articles/php-exception-handling",
+  "description": "Minimal examples showing bad vs good exception handling in PHP (teaching)",
   "type": "project",
   "autoload": {
     "psr-4": {"MediumArticles\\ExceptionHandling\\": "src/"}
