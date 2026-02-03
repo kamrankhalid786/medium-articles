@@ -59,6 +59,29 @@ jobs:
         run: |
           vendor/bin/phpunit -c phpunit.xml
 
+  php-operators:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-versions: [8.1, 8.2]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          extensions: mbstring
+      - name: Install composer deps (php-operators)
+        working-directory: examples/php-operators
+        run: |
+          php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+          php composer-setup.php --install-dir=/usr/local/bin --filename=composer || true
+          composer install --no-interaction --prefer-dist
+      - name: Run PHP unit tests (php-operators)
+        working-directory: examples/php-operators
+        run: |
+          vendor/bin/phpunit -c phpunit.xml
+
   build-docs:
     runs-on: ubuntu-latest
     needs: [test, php]
