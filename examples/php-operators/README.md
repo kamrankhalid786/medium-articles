@@ -1,3 +1,5 @@
+[![CI](https://github.com/kamrankhalid786/medium-articles/actions/workflows/ci.yml/badge.svg?query=branch:main)](https://github.com/kamrankhalid786/medium-articles/actions/workflows/ci.yml)
+
 # PHP operators — examples
 
 This folder contains minimal, focused examples that demonstrate a handful of useful PHP operators and expressions.
