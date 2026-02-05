@@ -7,6 +7,9 @@ Welcome — this site mirrors the repository and contains runnable examples used
 - A PHP (framework-agnostic) article on exception handling (`articles/03-stop-writing-try-catch-like-this.md`)
 - Runnable Python and JavaScript examples in `examples/`
 
+- A JavaScript article on equality operators (`articles/05-js-equality-operators.md`)
+- Runnable JS example: `examples/js-equality-operators`
+
 ## Quick links
 - Python example: `examples/intro-python`
 - PHP example: `examples/php-exception-handling`
