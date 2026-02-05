@@ -1,0 +1,12 @@
+{
+  "name": "js-equality-operators",
+  "version": "1.0.0",
+  "description": "Example for == vs === in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/test.js"
+  },
+  "devDependencies": {
+    "mocha": "^10.0.0"
+  }
+}
